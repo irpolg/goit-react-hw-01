@@ -1,4 +1,5 @@
-//import css
+import css from "./Profile.module.css";
+
 function Profile({ name, tag, location, image, stats }) {
     return (
         <div>
@@ -8,6 +9,9 @@ function Profile({ name, tag, location, image, stats }) {
                     alt="User avatar"
                 />
                 <p>Petra Marica</p>
+                <p>@pmarica</p>
+                <p>Salvador, Brasil</p>
+                                <p>Petra Marica</p>
                 <p>@pmarica</p>
                 <p>Salvador, Brasil</p>
             </div>

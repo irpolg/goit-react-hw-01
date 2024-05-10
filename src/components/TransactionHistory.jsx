@@ -1,8 +1,9 @@
-//import css from 
+import css from "./TransactionHistory.module.css";
+
 function TransactionHistory({ items }) {
     return (
-        <table>
-            <thead>
+        <table className={css.table}>
+            <thead className={css.tableHead}>
                 <tr>
                     <th>Type</th>
                     <th>Amount</th>
@@ -11,17 +12,15 @@ function TransactionHistory({ items }) {
             </thead>
 
             <tbody>
-                <tr>
-                    <td>Invoice</td>
-                    <td>125</td>
-                    <td>USD</td>
-                </tr>
-                <tr>
-                    <td>Withdrawal</td>
-                    <td>85</td>
-                    <td>USD</td>
-                </tr>
+                {items.map(item => (
+                    <tr className={css.tableRow} key={item.id}>
+                        <td className={css.transactionType}>{item.type}</td>
+                        <td>{item.amount}</td>
+                        <td>{item.currency}</td>
+                     </tr>
+                ))}
             </tbody>
+
         </table>
     )
 }

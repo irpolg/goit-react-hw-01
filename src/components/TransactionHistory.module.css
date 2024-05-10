@@ -1,0 +1,23 @@
+.table {
+    width: 600;
+    text-align: center;
+    border: 1px;
+    border-color: black;
+}
+
+
+.tableHead {
+    background-color: black;
+    color: white;
+}
+
+.tableRow {
+    background-color: white;
+    color: black;
+}
+
+.tracsactionType {
+    text-transform: capitalize;
+    /* text-align: start; */
+    padding-left: 40px;
+}

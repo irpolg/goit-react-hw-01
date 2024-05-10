@@ -1,4 +1,6 @@
-//import css from 
+import css from "./FriendListItem.module.css";
+
+//const FriendListItem = ({ avatar, name, isOnline }) => {
 function FriendListItem({ avatar, name, isOnline }) {
     return (
         <div>
