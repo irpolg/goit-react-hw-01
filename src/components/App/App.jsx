@@ -6,15 +6,16 @@
 // import "modern-normalize";
 import './App.css'
 
-import Profile from './components/Profile';
-import FriendList from './components/FriendList';
-import TransactionHistory from './components/TransactionHistory';
+import Profile from '../Profile/Profile';
+import FriendList from '../FriendList/FriendList';
+import TransactionHistory from '../TransactionHistory/TransactionHistory';
 
-import userData from './userData.json'
-import friends from "./friends.json";
-import transactions from './transactions.json'
+import userData from '../../userData.json'
+import friends from "../../friends.json";
+import transactions from '../../transactions.json'
 
-function App () {
+function App() {
+  console.log(userData);
   return (
     <>
       <Profile
