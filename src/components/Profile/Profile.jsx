@@ -1,6 +1,6 @@
 import css from "./Profile.module.css";
-//stats
-function Profile({ name, tag, location, image }) {
+
+function Profile({ name, tag, location, image, stats }) {
     return (
         <div className={css.userProfile}>
             <div className={css.userData}>
@@ -10,18 +10,18 @@ function Profile({ name, tag, location, image }) {
                 <p className={css.data}>{location}</p>
             </div>
 
-            <ul className={css.info}>
-                <li className={css.infoItem}>
+            <ul className={css.statsList}>
+                <li className={css.statsItem}>
                     <span>Followers</span>
-                    <span>1000</span>
+                    <span className={css.count}>{ stats.followers }</span>
                 </li>
-                <li className={css.infoItem}>
+                <li className={css.statsItem}>
                     <span>Views</span>
-                    <span>2000</span>
+                    <span className={css.count}>{stats.views}</span>
                 </li>
-                <li className={css.infoItem}>
+                <li className={css.statsItem}>
                     <span>Likes</span>
-                    <span>3000</span>
+                    <span className={css.count}>{stats.likes}</span>
                 </li>
             </ul>
         </div>
@@ -29,38 +29,3 @@ function Profile({ name, tag, location, image }) {
 }
 
 export default Profile;
-
-
-// function Profile({ name, tag, location, image, stats }) {
-//     return (
-//         <div className={css.user}>
-//             <div className={css.userData}>
-//                 {/* <img 
-//                     src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-//                     alt="User avatar"
-//                 />
-//                 <p>Petra Marica</p>
-//                 <p>@pmarica</p>
-//                 <p>Salvador, Brasil</p>
-//                                 <p>Petra Marica</p>
-//                 <p>@pmarica</p>
-//                 <p>Salvador, Brasil</p> */}
-//             </div>
-
-//             <ul>
-//                 <li>
-//                     <span>Followers</span>
-//                     <span>1000</span>
-//                 </li>
-//                 <li>
-//                     <span>Views</span>
-//                     <span>2000</span>
-//                 </li>
-//                 <li>
-//                     <span>Likes</span>
-//                     <span>3000</span>
-//                 </li>
-//             </ul>
-//         </div>
-//     )
-// }
